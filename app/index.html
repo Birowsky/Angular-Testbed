@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="angularTestbedApp">
 <head>
 	<meta charset="utf-8">
 	<title></title>
@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 </head>
-<body ng-app="angularTestbedApp">
+<body ng-controller="MainCtrl as MainCtrl">
 
 
 
@@ -24,43 +24,14 @@
 
 
 
+	<div so-kromid></div>
 
 
-
-<div
-	class="container"
-	so-kromid>
+	<hr>
 
 
-	<div class="form-group">
-		<label for="exampleInputEmail1">Email address</label>
-		<input
-			type="text"
-			class="form-control"
-			id="exampleInputEmail1"
-			placeholder="Enter category"
-			ng-model="soKromid.theFilter">
-	</div>
+	<div so-kromid></div>
 
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">Panel heading without title</div>
-				<div class="panel-body">
-					<ul>
-						<li ng-repeat="
-							contentItem in soKromid.content |
-							filter: { category: soKromid.theFilter }
-							track by $index">
-							{{contentItem.a}}
-						</li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
 
 
 

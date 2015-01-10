@@ -7,26 +7,33 @@
  * # soKromid
  */
 angular.module('angularTestbedApp')
-.directive('soKromid', function (Api) {
-	return function postLink(scope, element, attrs) {
-		scope.soKromid = {};
+.directive('soKromid', function (Api, $templateCache) {
+	return {
 
-		scope.soKromid.content = 'nemat nisto';
+		templateUrl: 'views/so-kromid.html',
 
-		scope.soKromid.theFilter = 'oajwefoj';
-
-		//servisu, daj mi 'content'
-		//ko ke mi go dajs, da go klajme vo soKromid.content
+		// scope: true,
+		link: function postLink(scope) {
+			scope.soKromid = {};
 
 
-		var promise = Api.getContent();
+			scope.soKromid.content = 'nemat nisto';
 
-		promise.then(function (data) {
-			scope.soKromid.content = data;
-		});
+			scope.soKromid.theFilter = 'oajwefoj';
+
+			//servisu, daj mi 'content'
+			//ko ke mi go dajs, da go klajme vo soKromid.content
+
+			// scope.vrednost = 'bafca';
+			console.log(scope.vrednost);
 
 
+			var promise = Api.getContent();
 
+			promise.then(function (data) {
+				scope.soKromid.content = data;
+			});
+		}
 
 	};
 });

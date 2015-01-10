@@ -1,0 +1,33 @@
+<div class="container">
+	<button ng-click="doMeFromBehind()">magare</button>
+
+	<div class="form-group">
+		<label for="exampleInputEmail1">Email address</label>
+		<input
+			type="text"
+			class="form-control"
+			id="exampleInputEmail1"
+			placeholder="Enter category"
+			ng-model="soKromid.theFilter">
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Panel heading without title</div>
+				<div class="panel-body">
+					<ul>
+						<li ng-repeat="
+							contentItem in soKromid.content |
+							filter: { category: soKromid.theFilter }
+							track by $index">
+							{{contentItem.a}}
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+

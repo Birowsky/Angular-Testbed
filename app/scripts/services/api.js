@@ -48,7 +48,7 @@ angular.module('angularTestbedApp')
 
 		setTimeout(function () {
 			deferred.resolve(content);
-		}, 2000);
+		}, 1000);
 
 
 		return deferred.promise;
