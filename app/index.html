@@ -23,6 +23,70 @@
 
 
 
+
+
+
+
+<div
+	class="container"
+	so-kromid>
+
+
+	<div class="form-group">
+		<label for="exampleInputEmail1">Email address</label>
+		<input
+			type="text"
+			class="form-control"
+			id="exampleInputEmail1"
+			placeholder="Enter category"
+			ng-model="soKromid.theFilter">
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Panel heading without title</div>
+				<div class="panel-body">
+					<ul>
+						<li ng-repeat="
+							contentItem in soKromid.content |
+							filter: { category: soKromid.theFilter }
+							track by $index">
+							{{contentItem.a}}
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- build:js(.) scripts/vendor.js -->
 	<!-- bower:js -->
 	<script src="bower_components/jquery/dist/jquery.js"></script>
@@ -53,6 +117,8 @@
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers/main.js"></script>
 	<script src="scripts/controllers/about.js"></script>
+<script src="scripts/directives/so-kromid.js"></script>
+<script src="scripts/services/api.js"></script>
 	<!-- endbuild -->
 </body>
 </html>
