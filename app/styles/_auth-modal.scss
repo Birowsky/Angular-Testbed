@@ -1,0 +1,24 @@
+#authModal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: hsla(322, 48%, 17%, 0.8);
+	z-index: 1000;
+
+	.thePane {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		width: 300px;
+		height: 400px;
+		margin-left: -150px;
+		margin-top: -200px;
+		padding: 30px;
+		background: white;
+		box-shadow: 0 50px 50px rgba(0,0,0,.3);
+		border-radius: 20px;
+	}
+
+}
