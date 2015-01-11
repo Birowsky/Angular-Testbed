@@ -7,7 +7,7 @@
  * # soKromid
  */
 angular.module('angularTestbedApp')
-.directive('soKromid', function (Api, $templateCache) {
+.directive('soKromid', function (Api) {
 	return {
 
 		templateUrl: 'views/so-kromid.html',
