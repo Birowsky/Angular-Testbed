@@ -1,0 +1,45 @@
+<div
+	id="authModal"
+	ng-show="authModal.shouldShow()">
+	<div class="thePane">
+		<h1>Bombarden</h1>
+		<form
+			role="form"
+			name="authForm"
+			ng-submit="authModal.doAuth()">
+			<div class="form-group">
+				<label for="exampleInputEmail1">
+					Email address
+				</label>
+				<input
+					type="email"
+					class="form-control"
+					id="exampleInputEmail1"
+					placeholder="Enter email"
+					ng-model="authModal.email"
+					required>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">
+					Password
+				</label>
+				<input
+					type="password"
+					class="form-control"
+					id="exampleInputPassword1"
+					placeholder="Password"
+					ng-model="authModal.pass"
+					required>
+			</div>
+			<button
+				type="submit"
+				class="btn btn-default"
+				ng-disabled="
+					authForm.$invalid
+				">
+				Log me in
+			</button>
+		</form>
+	</div>
+</div>
+

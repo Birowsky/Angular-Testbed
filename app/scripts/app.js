@@ -31,4 +31,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function (AuthInterceptor) {
+    console.log(AuthInterceptor);
   });

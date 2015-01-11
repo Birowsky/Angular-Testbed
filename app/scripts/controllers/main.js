@@ -8,7 +8,7 @@
  * Controller of the angularTestbedApp
  */
 angular.module('angularTestbedApp')
-.controller('MainCtrl', function ($scope, Api) {
+.controller('MainCtrl', function ($scope) {
 	$scope.vrednost = 'na!';
 	$scope.doMeFromBehind = function () {
 		window.alert('that was awesome');

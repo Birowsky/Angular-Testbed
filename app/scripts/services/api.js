@@ -40,6 +40,15 @@ angular.module('angularTestbedApp')
 	];
 
 
+	this.auth = function () {
+		var deferred = $q.defer();
+
+		setTimeout(function () {
+			deferred.resolve('ajkwfeopbkhjkaweopf');
+		}, 1000);
+
+		return deferred.promise;
+	};
 
 
 	this.getContent = function () {

@@ -16,62 +16,20 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 </head>
-<body ng-controller="MainCtrl as MainCtrl">
+<body >
 
 
 
 <p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
 
 
 
+<div auth-modal></div>
 
 
-
-<div id="authModal">
-
-
-	<div class="thePane">
-		<h1>Bombarden</h1>
-		<form role="form">
-			<div class="form-group">
-				<label for="exampleInputEmail1">
-					Email address
-				</label>
-				<input
-					type="email"
-					class="form-control"
-					id="exampleInputEmail1"
-					placeholder="Enter email">
-			</div>
-			<div class="form-group">
-				<label for="exampleInputPassword1">
-					Password
-				</label>
-				<input
-					type="password"
-					class="form-control"
-					id="exampleInputPassword1"
-					placeholder="Password">
-			</div>
-			<button
-				type="submit"
-				class="btn btn-default">
-				Log me in
-			</button>
-		</form>
-
-	</div>
-
-
-</div>
 
 
 
@@ -130,6 +88,9 @@
 	<script src="scripts/controllers/about.js"></script>
 <script src="scripts/directives/so-kromid.js"></script>
 <script src="scripts/services/api.js"></script>
+<script src="scripts/directives/auth-modal.js"></script>
+<script src="scripts/services/auth.js"></script>
+<script src="scripts/services/auth-interceptor.js"></script>
 	<!-- endbuild -->
 </body>
 </html>
